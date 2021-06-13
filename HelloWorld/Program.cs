@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace HelloWorld
 {
@@ -140,7 +141,44 @@ namespace HelloWorld
 
             Console.WriteLine($"Name is : {myobj.Name}");
             Console.WriteLine($"Address is : {myobj.Address}");
+
+          // created a List of object means array of oobjects using
+          // the class Student
+            var students = new List<Student>() {
+                new Student(){ Id = 1, Name="Bill"},
+                new Student(){ Id = 2, Name="Steve"},
+                new Student(){ Id = 3, Name="Ram"},
+                new Student(){ Id = 4, Name="Abdul"}
+            };
+
+       
+
+            //Console.WriteLine(students[0].Name);
+            //Console.WriteLine(students[1].Name);
+
+            //OR
+
+            foreach(var stud in students)
+            {
+                Console.WriteLine(stud.Name);
+                Console.WriteLine(stud.Id);
             }
-        } 
-    }
+
+
+            //var numberss = new List<int>() { 1, 2, 3, 4, 5, 5 };
+
+            //foreach (var nums in numberss)
+            //{
+            //    Console.WriteLine(nums);
+            //}
+
+
+           
+            }
+        }
+          
+
+        
+    } 
+    
 
